@@ -1,16 +1,15 @@
-# myeg_flutter_test
+# flutter_test
+This is demon project
 
-A new Flutter project.
+## flutter version
+Channel stable, 3.29.3
 
-## Getting Started
+## State management
+Bloc
 
-This project is a starting point for a Flutter application.
+## Route
+go router
 
-A few resources to get you started if this is your first Flutter project:
+## Api reference
+1. product list - product list from https://github.com/keikaavousi/fake-store-api?tab=readme-ov-file
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
