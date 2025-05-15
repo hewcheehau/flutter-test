@@ -1,6 +1,12 @@
 # flutter_test
 This is demon project
 
+## How to run app 
+main.dart -> entry point
+'''
+flutter run
+'''
+
 ## flutter version
 Channel stable, 3.29.3
 

@@ -5,7 +5,7 @@ import 'package:myeg_flutter_test/core/network/product_repository.dart';
 
 final sl = GetIt.instance;
 
-void setup() async {
+Future<void> setup() async {
 
   sl.registerLazySingleton<DioClient>(() => DioClient(baseUrl: "https://fakestoreapi.com/"));
   sl.registerSingleton<ProductApi>(ProductApi());

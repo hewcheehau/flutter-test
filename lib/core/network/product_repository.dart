@@ -6,6 +6,6 @@ class ProductRepository {
   ProductRepository({required this.productApi});
 
   Future<dynamic> getProductList() async {
-    return productApi.getProductList();
+    return await productApi.getProductList();
   }
 }
