@@ -5,6 +5,6 @@ class ProductApi {
   final dioClient = sl<DioClient>();
 
   Future<dynamic> getProductList() async {
-    return dioClient.get('products');
+    return await dioClient.get('products');
   }
 }
