@@ -16,3 +16,11 @@ final class ProductListFetched extends ProductListEvent {
   @override
   List<Object> get props => [];
 }
+
+
+final class ProductSearched extends ProductListEvent {
+  const ProductSearched({required this.keyword});
+  final String keyword;
+  @override
+  List<Object> get props => [keyword];
+}

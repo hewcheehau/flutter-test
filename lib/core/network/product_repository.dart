@@ -8,4 +8,8 @@ class ProductRepository {
   Future<dynamic> getProductList() async {
     return await productApi.getProductList();
   }
+
+  Future<dynamic> getProductCategory() async {
+    return await productApi.getProductCategory();
+  }
 }
