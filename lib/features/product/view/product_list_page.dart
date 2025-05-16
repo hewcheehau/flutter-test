@@ -98,39 +98,42 @@ class _ProductListPageState extends State<ProductListPage> {
                                               decoration: BoxDecoration(borderRadius: BorderRadius.circular(5), color: Colors.white),
                                               child: LayoutBuilder(
                                                 builder: (context, ly) {
-                                                  return Column(
-                                                    children: [
-                                                      CachedNetworkImage(
-                                                        height: ly.maxHeight / 2,
-                                                        imageUrl: data.imageUrl ?? "",
-                                                        errorWidget: (context, url, error) => Text('ERROR'),
-                                                      ),
-                                                      Container(
-                                                        height: ly.maxHeight / 2,
-                                                        alignment: Alignment.bottomCenter,
-                                                        padding: const EdgeInsets.all(10.0),
-                                                        child: Column(
-                                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                                          children: [
-                                                            10.ph,
-                                                            Text(data.title ?? "", maxLines: 3),
-                                                            3.ph,
-                                                            _CategoryWidget(name: data.category ??"",),
-                                                            Spacer(),
-                                                            Row(
-                                                              crossAxisAlignment: CrossAxisAlignment.end,
-                                                              children: [
-                                                                Icon(Icons.star, color: Colors.amber),
-                                                                3.pw,
-                                                                Text(data.rating?.rate.toString() ?? ""),
-                                                                const Spacer(),
-                                                                Text(data.price?.toPrice()),
-                                                              ],
-                                                            ),
-                                                          ],
+                                                  return GestureDetector(
+                                                    onTap: () => context.go('/details', extra: data),
+                                                    child: Column(
+                                                      children: [
+                                                        CachedNetworkImage(
+                                                          height: ly.maxHeight / 2,
+                                                          imageUrl: data.imageUrl ?? "",
+                                                          errorWidget: (context, url, error) => Text('ERROR'),
                                                         ),
-                                                      ),
-                                                    ],
+                                                        Container(
+                                                          height: ly.maxHeight / 2,
+                                                          alignment: Alignment.bottomCenter,
+                                                          padding: const EdgeInsets.all(10.0),
+                                                          child: Column(
+                                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                                            children: [
+                                                              10.ph,
+                                                              Text(data.title ?? "", maxLines: 3),
+                                                              3.ph,
+                                                              _CategoryWidget(name: data.category ??"",),
+                                                              Spacer(),
+                                                              Row(
+                                                                crossAxisAlignment: CrossAxisAlignment.end,
+                                                                children: [
+                                                                  Icon(Icons.star, color: Colors.amber),
+                                                                  3.pw,
+                                                                  Text(data.rating?.rate.toString() ?? ""),
+                                                                  const Spacer(),
+                                                                  Text(data.price?.toPrice()),
+                                                                ],
+                                                              ),
+                                                            ],
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
                                                   );
                                                 },
                                               ),
